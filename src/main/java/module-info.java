@@ -5,6 +5,7 @@ module com.javaprojects.cuetiansforever {
     requires org.controlsfx.controls;
     requires com.dlsc.formsfx;
     requires org.kordamp.bootstrapfx.core;
+    requires  mysql.connector.j;
 
     opens com.javaprojects.cuetiansforever to javafx.fxml;
     exports com.javaprojects.cuetiansforever;
