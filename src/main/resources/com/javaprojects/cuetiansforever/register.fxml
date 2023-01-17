@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaprojects.cuetiansforever.Register">
     <children>
         <AnchorPane prefHeight="89.0" prefWidth="600.0" style="-fx-background-color: D7E9B9;">
@@ -24,7 +23,7 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <Button layoutX="219.0" layoutY="158.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Register as Alumni" />
-        <Button layoutX="219.0" layoutY="242.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Register as Student" />
+        <Button layoutX="219.0" layoutY="158.0" mnemonicParsing="false" onAction="#alumnireg" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Register as Alumni" />
+        <Button layoutX="219.0" layoutY="242.0" mnemonicParsing="false" onAction="#studentreg" prefHeight="42.0" prefWidth="183.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Register as Student" />
     </children>
 </AnchorPane>
