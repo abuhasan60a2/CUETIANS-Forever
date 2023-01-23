@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="655.0" prefWidth="843.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <AnchorPane prefHeight="119.0" prefWidth="843.0" style="-fx-background-color: D7E9B9;">
+         <children>
+            <Text fill="#6f1ab6" fontSmoothingType="LCD" layoutX="289.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="UPDATE INFORMATION" wrappingWidth="352.63714599609375">
+               <font>
+                  <Font name="System Bold" size="26.0" />
+               </font>
+            </Text>
+            <ImageView fitHeight="98.0" fitWidth="101.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../../../cuetlogo.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <Text layoutX="53.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSWORD :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="53.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="EMAIL :" wrappingWidth="79.52423095703125">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="53.0" layoutY="252.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="53.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CONFIRM PASSWORD :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="249.0" layoutY="268.0" strokeType="OUTSIDE" strokeWidth="0.0" />
+      <Text layoutX="475.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="FACEBOOK PROFILE :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="475.0" layoutY="188.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PASSING YEAR:">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="50.0" layoutY="486.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PERMANENT ADDRESS :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="475.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PROFESSION :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="475.0" layoutY="294.0" strokeType="OUTSIDE" strokeWidth="0.0" text="COMPANY :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="50.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PRESENT ADDRESS :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <Text layoutX="475.0" layoutY="424.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LINKEDIN PROFILE :">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Text>
+      <TextArea layoutX="222.0" layoutY="168.0" prefHeight="21.0" prefWidth="200.0" />
+      <TextArea layoutX="222.0" layoutY="220.0" prefHeight="21.0" prefWidth="200.0" />
+      <TextArea layoutX="222.0" layoutY="269.0" prefHeight="21.0" prefWidth="200.0" />
+      <TextArea layoutX="622.0" layoutY="162.0" prefHeight="21.0" prefWidth="200.0" />
+      <TextArea layoutX="622.0" layoutY="219.0" prefHeight="21.0" prefWidth="200.0" />
+      <TextArea layoutX="622.0" layoutY="278.0" prefHeight="21.0" prefWidth="200.0" />
+      <TextArea layoutX="222.0" layoutY="398.0" prefHeight="21.0" prefWidth="200.0" />
+      <TextArea layoutX="222.0" layoutY="460.0" prefHeight="21.0" prefWidth="200.0" />
+      <TextArea layoutX="622.0" layoutY="398.0" prefHeight="21.0" prefWidth="200.0" />
+      <TextArea layoutX="622.0" layoutY="460.0" prefHeight="21.0" prefWidth="200.0" />
+      <Button fx:id="updatedata" layoutX="626.0" layoutY="539.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black; -fx-font-weight: bold;" text="Update" textAlignment="CENTER" textFill="#6f1ab6">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
