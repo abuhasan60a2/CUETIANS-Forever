@@ -24,10 +24,17 @@ public class Student {
         stage.show();
 
     }
-    public void getname(ActionEvent event){
-        Home data = new Home();
-        System.out.println(data.getName());
-        studentname.setText(data.getName());
+    public void Updatescene(ActionEvent event) throws IOException {
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(loadFXML("Update"));
+        stage.setScene(scene);
+        stage.show();
+    }
+    public void Reportscene(ActionEvent event) throws IOException {
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(loadFXML("Report"));
+        stage.setScene(scene);
+        stage.show();
     }
 
 

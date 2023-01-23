@@ -42,5 +42,10 @@
             <Font size="15.0" />
          </font>
       </Button>
+      <Button fx:id="postedjob1" layoutX="422.0" layoutY="529.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black; -fx-font-weight: bold;" text="Return" textAlignment="CENTER" textFill="#6f1ab6">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Button>
     </children>
 </AnchorPane>
