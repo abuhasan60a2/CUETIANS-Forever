@@ -42,6 +42,14 @@ public class Home {
     private Button registration;
     @FXML
     private Label messagelabel;
+    public static int student_id;
+    public static String login_password;
+    public static String student_status;
+    public static String name;
+    public static String getName(){
+        return name;
+    }
+
 
     public void changetoreg(ActionEvent event) throws IOException {
 //        root = FXMLLoader.load(getClass().getResource("register.fxml"));
@@ -68,10 +76,18 @@ public class Home {
             ResultSet queryresult = statement.executeQuery();
 
             while(queryresult.next()){
-                String s = queryresult.getString("student_id");
-                System.out.println(s);
+
+
+                String s = queryresult.getString("student_status");
+//                System.out.println(s);
                 if(queryresult.getInt("student_id")==Integer.parseInt(studentid.getText())){
-                    //messagelabel.setText("Welcome!");
+                    student_id = Integer.parseInt(studentid.getText());
+                    login_password = password.getText();
+                    String first_name = queryresult.getString("first_name");
+                    String last_name = queryresult.getString("last_name");
+                    name = first_name + " " + last_name;
+//                    System.out.println(name);
+                    student_status = s;
                     stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                     if(Objects.equals(s, "A")){
                         scene = new Scene(loadFXML("Alumni"));
@@ -91,7 +107,6 @@ public class Home {
         catch(Exception e){
             e.printStackTrace();
         }
-        connect.closeConnections();
 
     }
 

@@ -17,7 +17,7 @@
                         <Font size="22.0" />
                     </font>
                 </Text>
-                <Label fx:id="alumniname" layoutX="326.0" layoutY="31.0" prefHeight="32.0" prefWidth="214.0" style="-fx-font-weight: bold;" textFill="#6f1ab6">
+                <Label fx:id="alumniname" layoutX="326.0" layoutY="31.0" onInputMethodTextChanged="#getname" prefHeight="32.0" prefWidth="214.0" style="-fx-font-weight: bold;" textFill="#6f1ab6">
                     <font>
                         <Font size="22.0" />
                     </font>
@@ -29,9 +29,11 @@
                 </ImageView>
             </children>
         </AnchorPane>
-        <Button fx:id="updateinformation" layoutX="194.0" layoutY="119.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Update Information" textAlignment="CENTER" />
-        <Button fx:id="searchprofiles" layoutX="194.0" layoutY="186.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Search Profiles" textAlignment="CENTER" />
-        <Button fx:id="postjobs" layoutX="194.0" layoutY="253.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Post Jobs" textAlignment="CENTER" />
-        <Button fx:id="reportproblem" layoutX="194.0" layoutY="322.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Report a Problem" textAlignment="CENTER" />
+        <Button fx:id="updateinformation" layoutX="99.0" layoutY="133.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Update Information" textAlignment="CENTER" />
+        <Button fx:id="searchprofiles" layoutX="352.0" layoutY="133.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Search Profiles" textAlignment="CENTER" />
+        <Button fx:id="postjobs" layoutX="99.0" layoutY="218.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Post Jobs" textAlignment="CENTER" />
+        <Button fx:id="reportproblem" layoutX="352.0" layoutY="218.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Report a Problem" textAlignment="CENTER" />
+      <Button fx:id="postedjob" layoutX="99.0" layoutY="291.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Posted Jobs" textAlignment="CENTER" />
+      <Button fx:id="logout" layoutX="352.0" layoutY="291.0" mnemonicParsing="false" onAction="#logout" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: red; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Logout" textAlignment="CENTER" />
     </children>
 </AnchorPane>
