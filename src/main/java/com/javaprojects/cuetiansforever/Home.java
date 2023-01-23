@@ -18,8 +18,10 @@ import javafx.event.Event;
 
 import java.io.IOException;
 import java.sql.*;
+import java.util.Objects;
 
 import com.javaprojects.cuetiansforever.HelloApplication;
+import org.controlsfx.control.action.Action;
 import org.w3c.dom.Text;
 
 import static com.javaprojects.cuetiansforever.DatabaseConnection.dbconnect;
@@ -50,13 +52,13 @@ public class Home {
     }
     public void login(ActionEvent event){
         if(studentid.getText().isBlank()==false && password.getText().isBlank()==false){
-            validadateLogin();
+            validadateLogin(event);
         }
         else{
             messagelabel.setText("Enter your credintials");
         }
     }
-    public void validadateLogin() {
+    public void validadateLogin(ActionEvent event) {
         DatabaseConnection connect = new DatabaseConnection();
         Connection connectDB = connect.makeConnections();
         try{
@@ -66,9 +68,19 @@ public class Home {
             ResultSet queryresult = statement.executeQuery();
 
             while(queryresult.next()){
-
+                String s = queryresult.getString("student_id");
+                System.out.println(s);
                 if(queryresult.getInt("student_id")==Integer.parseInt(studentid.getText())){
-                    messagelabel.setText("Welcome!");
+                    //messagelabel.setText("Welcome!");
+                    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+                    if(Objects.equals(s, "A")){
+                        scene = new Scene(loadFXML("Alumni"));
+                    }
+                    else {
+                        scene = new Scene(loadFXML("Student"));
+                    }
+                    stage.setScene(scene);
+                    stage.show();
                 }else{
                     messagelabel.setText("Invalid credintials");
                 }
@@ -79,7 +91,7 @@ public class Home {
         catch(Exception e){
             e.printStackTrace();
         }
-
+        connect.closeConnections();
 
     }
 
