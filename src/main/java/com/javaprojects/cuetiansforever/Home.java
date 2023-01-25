@@ -74,7 +74,6 @@ public class Home {
                 }
                 else {
                     scene = new Scene(loadFXML("Student"));
-                    student.settextinlabel(name);
                 }
                 stage.setScene(scene);
                 stage.show();
