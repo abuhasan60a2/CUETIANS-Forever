@@ -11,13 +11,17 @@ import java.io.IOException;
 
 import static com.javaprojects.cuetiansforever.HelloApplication.loadFXML;
 import com.javaprojects.cuetiansforever.Home;
+import Backend.db;
 public class Student {
     private  Stage stage;
     private Scene scene;
 
     @FXML
-    Label studentname;
+    static
+    public Label studentname;
+
     public void logout(ActionEvent event) throws IOException {
+        db.logout();
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(loadFXML("home"));
         stage.setScene(scene);

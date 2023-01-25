@@ -35,33 +35,4 @@ public class DatabaseConnection {
             }
         }
     }
-//    Connection databaseconnect;
-//    public Connection getconnection(){
-//        String databasename = "cuetiansforeverdb";
-//        String databaseusername = "root";
-//        String databasepassword = "hasan.cesarerodrigo00";
-//        String url = "jdbc:mysql://localhost/"+databasename;
-//        try{
-//            //register the driver
-//            Class.forName("com.mysql.cj.jdbc.Driver");
-//            databaseconnect = DriverManager.getConnection(url, databaseusername, databasepassword);
-//
-//        }
-//        catch(Exception e){
-//            e.printStackTrace();
-//            e.getCause();
-//        }
-//        return databaseconnect;
-//    }
-//    public void closeConnections() {
-//        if (databaseconnect != null) {
-//            try {
-//                databaseconnect.close();
-//            } catch (SQLException error) {
-//                error.printStackTrace();
-//            }
-//        }
-//    }
-
-
 }
