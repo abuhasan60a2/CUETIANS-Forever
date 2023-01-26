@@ -26,7 +26,7 @@ public class Alumni {
     }
     public void Updatescene(ActionEvent event) throws IOException {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(loadFXML("Update"));
+        scene = new Scene(loadFXML("Update(Alumni)"));
         stage.setScene(scene);
         stage.show();
     }
@@ -36,4 +36,11 @@ public class Alumni {
         stage.setScene(scene);
         stage.show();
     }
+    public void switchtojobscene(ActionEvent event)throws IOException{
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(loadFXML("PostJob"));
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }

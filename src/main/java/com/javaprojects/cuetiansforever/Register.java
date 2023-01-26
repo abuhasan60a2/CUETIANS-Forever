@@ -9,22 +9,22 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 
+import static com.javaprojects.cuetiansforever.HelloApplication.loadFXML;
+
 public class Register {
     private Stage stage;
     private Scene scene;
     private Parent root;
 
     public void studentreg(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Register-2.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(loadFXML("StuReg"));
         stage.setScene(scene);
         stage.show();
     }
     public void alumnireg(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(getClass().getResource("Register-1.fxml"));
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(loadFXML("AlumniReg"));
         stage.setScene(scene);
         stage.show();
     }

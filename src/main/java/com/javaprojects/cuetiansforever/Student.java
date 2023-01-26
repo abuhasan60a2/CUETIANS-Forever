@@ -30,7 +30,7 @@ public class Student {
     }
     public void Updatescene(ActionEvent event) throws IOException {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(loadFXML("Update"));
+        scene = new Scene(loadFXML("Update(Student)"));
         stage.setScene(scene);
         stage.show();
     }
@@ -40,6 +40,7 @@ public class Student {
         stage.setScene(scene);
         stage.show();
     }
+
 
 
 }

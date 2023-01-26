@@ -11,6 +11,25 @@ public class db {
     public static String db_password = "";
     public static Connection dbconnect = null;
     public static JavadbCuetian cuetian = null;
+    public static JavadbJob job  = null;
+    public static JavadbReport report = null;
+    //functions for report
+
+
+    public static void postReport(String title, String description, long postid) throws SQLException{
+        JavadbReport.InsertReportData(title, description, postid);
+    }
+
+    //functions for job portal
+    public static void setJob(JavadbJob _job){
+        job = _job;
+    }
+    public static void postjob(String jobtitle, String description, long postid) throws SQLException {
+        JavadbJob.insertjobdata(jobtitle, description, postid);
+        System.out.println("db postjob block");
+    }
+
+    //functions for cuetian instance
     public static boolean iscuetianavalable(){
         return cuetian !=null;
     }
@@ -28,9 +47,22 @@ public class db {
         return true;
 
     }
+    public static boolean signup(long ID,String firstName, String lastName, String email, String password, long phoneNumber, String department, String studentStatus, long batch, String dob, long age, String presentAddress, String permanentAddress, String joiningYear, String passing_year, String profession, String company, String facebookProfile, String linkedInProfile) throws SQLException {
+        cuetian = JavadbCuetian.signup(ID, firstName, lastName, email, password, phoneNumber, department, studentStatus, batch, dob, age, presentAddress, permanentAddress, joiningYear, passing_year, profession, company, facebookProfile, linkedInProfile);
+        if(cuetian == null){
+            System.out.println("resultset not found");
+            return false;
+        }
+        System.out.println("resultset found");
+        return true;
+    }
     public static void logout(){
         setCuetian(null);
     }
+
+
+
+    //functions for database connectivity
     public static boolean isConnectionAvailable() {
         return dbconnect != null;
     }

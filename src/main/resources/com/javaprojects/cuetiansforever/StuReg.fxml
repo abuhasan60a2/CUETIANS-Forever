@@ -127,21 +127,21 @@
             <Font size="14.0" />
          </font>
       </Label>
-      <TextField fx:id="studentid" layoutX="111.0" layoutY="165.0" prefHeight="25.0" prefWidth="245.0" />
-      <TextField fx:id="firstname" layoutX="113.0" layoutY="228.0" prefHeight="25.0" prefWidth="245.0" />
-      <TextField fx:id="lastname" layoutX="113.0" layoutY="290.0" prefHeight="25.0" prefWidth="245.0" />
-      <TextField fx:id="email" layoutX="113.0" layoutY="346.0" prefHeight="25.0" prefWidth="245.0" />
-      <TextField fx:id="phonenumber" layoutX="113.0" layoutY="517.0" prefHeight="25.0" prefWidth="245.0" />
-      <TextField fx:id="age" layoutX="111.0" layoutY="620.0" prefHeight="25.0" prefWidth="245.0" />
-      <TextField fx:id="dateofbirth" layoutX="111.0" layoutY="562.0" prefHeight="25.0" prefWidth="245.0" />
-      <PasswordField fx:id="password" layoutX="113.0" layoutY="408.0" prefHeight="25.0" prefWidth="245.0" />
-      <PasswordField fx:id="repassword" layoutX="113.0" layoutY="453.0" prefHeight="25.0" prefWidth="245.0" />
-      <TextArea fx:id="presentaddress" layoutX="113.0" layoutY="676.0" prefHeight="200.0" prefWidth="296.0" />
-      <TextField fx:id="department" layoutX="651.0" layoutY="364.0" prefHeight="25.0" prefWidth="217.0" />
-      <TextField fx:id="batch" layoutX="651.0" layoutY="419.0" prefHeight="25.0" prefWidth="217.0" />
-      <TextField fx:id="joiningyear" layoutX="655.0" layoutY="474.0" prefHeight="25.0" prefWidth="217.0" />
-      <TextField fx:id="facebookprofile" layoutX="651.0" layoutY="530.0" prefHeight="25.0" prefWidth="217.0" />
-      <TextField fx:id="linkedinprofile" layoutX="655.0" layoutY="584.0" prefHeight="25.0" prefWidth="217.0" />
-      <TextArea fx:id="permanentaddress" layoutX="651.0" layoutY="169.0" prefHeight="168.0" prefWidth="296.0" />
+      <TextField fx:id="studentid" layoutX="111.0" layoutY="165.0" prefHeight="25.0" prefWidth="245.0" text="1901001" />
+      <TextField fx:id="firstname" layoutX="113.0" layoutY="228.0" prefHeight="25.0" prefWidth="245.0" text="hello" />
+      <TextField fx:id="lastname" layoutX="113.0" layoutY="290.0" prefHeight="25.0" prefWidth="245.0" text="world" />
+      <TextField fx:id="email" layoutX="113.0" layoutY="346.0" prefHeight="25.0" prefWidth="245.0" text="helloworld@gmail.com" />
+      <TextField fx:id="phonenumber" layoutX="113.0" layoutY="517.0" prefHeight="25.0" prefWidth="245.0" text="01850338845" />
+      <TextField fx:id="age" layoutX="111.0" layoutY="620.0" prefHeight="25.0" prefWidth="245.0" text="22" />
+      <TextField fx:id="dateofbirth" layoutX="111.0" layoutY="562.0" prefHeight="25.0" prefWidth="245.0" text="2000-01-01" />
+      <PasswordField fx:id="password" layoutX="113.0" layoutY="408.0" prefHeight="25.0" prefWidth="245.0" text="hello" />
+      <PasswordField fx:id="repassword" layoutX="113.0" layoutY="453.0" prefHeight="25.0" prefWidth="245.0" text="hello" />
+      <TextArea fx:id="presentaddress" layoutX="113.0" layoutY="676.0" prefHeight="200.0" prefWidth="296.0" text="Dhaka" />
+      <TextField fx:id="department" layoutX="651.0" layoutY="364.0" prefHeight="25.0" prefWidth="217.0" text="cse" />
+      <TextField fx:id="batch" layoutX="651.0" layoutY="419.0" prefHeight="25.0" prefWidth="217.0" text="19" />
+      <TextField fx:id="joiningyear" layoutX="655.0" layoutY="474.0" prefHeight="25.0" prefWidth="217.0" text="2020" />
+      <TextField fx:id="facebookprofile" layoutX="651.0" layoutY="530.0" prefHeight="25.0" prefWidth="217.0" text="www.facebook.com" />
+      <TextField fx:id="linkedinprofile" layoutX="655.0" layoutY="584.0" prefHeight="25.0" prefWidth="217.0" text="www.linkedin.com" />
+      <TextArea fx:id="permanentaddress" layoutX="651.0" layoutY="169.0" prefHeight="168.0" prefWidth="296.0" text="Dhaka" />
     </children>
 </AnchorPane>

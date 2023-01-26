@@ -17,12 +17,12 @@ public class JavadbCuetian {
   private String department;
   private String studentStatus;
   private long batch;
-  private java.sql.Date dob;
+  private String dob;
   private long age;
   private String presentAddress;
   private String permanentAddress;
-  private java.sql.Date joiningYear;
-  private java.sql.Date passingYear;
+  private String joiningYear;
+  private String passingYear;
   private String profession;
   private String company;
   private String facebookProfile;
@@ -110,11 +110,11 @@ public class JavadbCuetian {
   }
 
 
-  public java.sql.Date getDob() {
+  public String getDob() {
     return dob;
   }
 
-  public void setDob(java.sql.Date dob) {
+  public void setDob(String dob) {
     this.dob = dob;
   }
 
@@ -146,20 +146,20 @@ public class JavadbCuetian {
   }
 
 
-  public java.sql.Date getJoiningYear() {
+  public String getJoiningYear() {
     return joiningYear;
   }
 
-  public void setJoiningYear(java.sql.Date joiningYear) {
+  public void setJoiningYear(String joiningYear) {
     this.joiningYear = joiningYear;
   }
 
 
-  public java.sql.Date getPassingYear() {
+  public String getPassingYear() {
     return passingYear;
   }
 
-  public void setPassingYear(java.sql.Date passingYear) {
+  public void setPassingYear(String passingYear) {
     this.passingYear = passingYear;
   }
 
@@ -209,12 +209,12 @@ public class JavadbCuetian {
       this.setDepartment(rs.getString("department"));
       this.setStudentStatus(rs.getString("student_status"));
       this.setBatch(rs.getLong("batch"));
-      this.setDob(rs.getDate("dob"));
+      this.setDob(rs.getString("dob"));
       this.setAge(rs.getLong("age"));
       this.setPresentAddress(rs.getString("present_address"));
       this.setPermanentAddress(rs.getString("permanent_address"));
-      this.setJoiningYear(rs.getDate("joining_year"));
-      this.setPassingYear(rs.getDate("passing_year"));
+      this.setJoiningYear(rs.getString("joining_year"));
+      this.setPassingYear(rs.getString("passing_year"));
       this.setProfession(rs.getString("profession"));
       this.setCompany(rs.getString("Company"));
       this.setFacebookProfile(rs.getString("facebook_profile"));
@@ -240,5 +240,33 @@ public class JavadbCuetian {
       }
       return null;
     }
+  public static JavadbCuetian signup(long ID,String firstName, String lastName, String email, String password, long phoneNumber, String department, String studentStatus, long batch, String dob, long age, String presentAddress, String permanentAddress, String joiningYear, String passing_year, String profession, String company, String facebookProfile, String linkedInProfile) throws SQLException {
+
+      java.sql.Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("INSERT INTO `javadb_cuetian` (`student_id`, `first_name`, `last_name`, `email`, `password`, `phone_number`, `department`, `student_status`, `batch`, `dob`, `age`, `present_address`, `permanent_address`, `joining_year`, `passing_year`, `profession`, `Company`, `facebook_profile`, `linkedIn_profile`) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?,?,?)");
+      st.setLong(1, ID);
+      st.setString(2, firstName);
+      st.setString(3, lastName);
+      st.setString(4,email);
+      st.setString(5, password);
+      st.setLong(6,phoneNumber);
+      st.setString(7, department);
+      st.setString(8, studentStatus);
+      st.setLong(9, batch);
+      st.setString(10, dob);
+      st.setLong(11, age);
+      st.setString(12,presentAddress);
+      st.setString(13, permanentAddress);
+      st.setString(14, joiningYear);
+      st.setString(15, passing_year);
+      st.setString(16, profession);
+      st.setString(17, company);
+      st.setString(18, facebookProfile);
+      st.setString(19, linkedInProfile);
+      st.execute();
+      st.close();
+      return login(ID, password);
+
+  }
 
 }
