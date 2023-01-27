@@ -86,48 +86,4 @@ public class Home {
             messagelabel.setText("Enter your credintials");
         }
     }
-//    public void validadateLogin(ActionEvent event) {
-//        DatabaseConnection connect = new DatabaseConnection();
-//        Connection connectDB = connect.makeConnections();
-//        try{
-//            PreparedStatement statement = connectDB.prepareStatement("SELECT * FROM javadb_cuetian WHERE student_id = ? AND password = ?");
-//            statement.setString(2,password.getText());
-//            statement.setInt(1,Integer.parseInt(studentid.getText()));
-//            ResultSet queryresult = statement.executeQuery();
-//
-//            while(queryresult.next()){
-//
-//
-//                String s = queryresult.getString("student_status");
-////                System.out.println(s);
-//                if(queryresult.getInt("student_id")==Integer.parseInt(studentid.getText())){
-//                    student_id = Integer.parseInt(studentid.getText());
-//                    login_password = password.getText();
-//                    String first_name = queryresult.getString("first_name");
-//                    String last_name = queryresult.getString("last_name");
-//                    name = first_name + " " + last_name;
-////                    System.out.println(name);
-//                    student_status = s;
-//                    stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-//                    if(Objects.equals(s, "A")){
-//                        scene = new Scene(loadFXML("Alumni"));
-//                    }
-//                    else {
-//                        scene = new Scene(loadFXML("Student"));
-//                    }
-//                    stage.setScene(scene);
-//                    stage.show();
-//                }else{
-//                    messagelabel.setText("Invalid credintials");
-//                }
-//
-//            }
-//
-//        }
-//        catch(Exception e){
-//            e.printStackTrace();
-//        }
-//
-//    }
-
 }

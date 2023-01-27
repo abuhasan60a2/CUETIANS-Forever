@@ -25,7 +25,7 @@ public class PostJob {
 
     public void PostJobOnSubmit(ActionEvent e) throws IOException, SQLException {
         String title = jobtitle.getText();
-        String description = jobtitle.getText();
+        String description = jobdescription.getText();
         long postid = db.cuetian.getStudentId();
         db.postjob(title, description, postid);
         backtohome(e);
