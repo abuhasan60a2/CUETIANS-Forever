@@ -3,6 +3,7 @@ package Backend;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class db {
     public static String db_url = "jdbc:mysql://localhost:3307/cuetiansforever";
@@ -13,9 +14,9 @@ public class db {
     public static JavadbCuetian cuetian = null;
     public static JavadbJob job  = null;
     public static JavadbReport report = null;
+
+
     //functions for report
-
-
     public static void postReport(String title, String description, long postid) throws SQLException{
         JavadbReport.InsertReportData(title, description, postid);
     }

@@ -53,4 +53,10 @@ public class Student  implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         studentname.setText(db.cuetian.getFirstName()+" "+db.cuetian.getLastName());
     }
+    public void switchtojob(ActionEvent event) throws IOException{
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(loadFXML("JobBoard"));
+        stage.setScene(scene);
+        stage.show();
+    }
 }

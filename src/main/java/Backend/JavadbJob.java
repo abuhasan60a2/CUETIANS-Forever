@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class JavadbJob {
 
@@ -47,13 +48,13 @@ public class JavadbJob {
   public void setCuetianPostId(long cuetianPostId) {
     this.cuetianPostId = cuetianPostId;
   }
-  public JavadbJob(ResultSet rs){
+
+  public JavadbJob(ResultSet rs) {
     try {
       this.jobTitle = rs.getString("job_title");
       this.jobDescription = rs.getString("job_description");
       this.cuetianPostId = rs.getLong("cuetian_post_id");
-    }
-    catch(SQLException e){
+    } catch (SQLException e) {
       throw new RuntimeException(e);
     }
   }
@@ -69,4 +70,37 @@ public class JavadbJob {
     statement.close();
   }
 
+  public static ArrayList<JavadbJob> getAllJobs() {
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT * FROM  javadb_job");
+      ResultSet rs = st.executeQuery();
+      if(rs==null){
+        System.out.println("no data in job table");
+      }
+      ArrayList<JavadbJob> list = new ArrayList<JavadbJob>();
+      while (rs.next()) {
+        list.add(new JavadbJob(rs));
+      }
+      System.out.println("getalljobs succeeded");
+      return list;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+  public static int countJobs(){
+    try{
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT count(*) AS  count FROM  javadb_job");
+      ResultSet rs = st.executeQuery();
+      rs.next();
+      System.out.println("countjobs function succeeded");
+      return rs.getInt("count");
+    }
+    catch (SQLException e){
+      e.printStackTrace();
+    }
+    return 0;
+  }
 }
