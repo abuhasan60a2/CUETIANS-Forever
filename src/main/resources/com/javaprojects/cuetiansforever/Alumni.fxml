@@ -36,6 +36,6 @@
       <Button fx:id="postedjob" layoutX="359.0" layoutY="253.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Jobs Posted By You" textAlignment="CENTER" />
       <Button fx:id="logout" layoutX="359.0" layoutY="316.0" mnemonicParsing="false" onAction="#logout" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: red; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Logout" textAlignment="CENTER" />
       <Button fx:id="dashboard" layoutX="65.0" layoutY="191.0" mnemonicParsing="false" onAction="#switchtodashboard" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="View Dashboard" textAlignment="CENTER" />
-      <Button fx:id="joblist" layoutX="352.0" layoutY="129.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Joblist" textAlignment="CENTER" />
+      <Button fx:id="joblist" layoutX="352.0" layoutY="129.0" mnemonicParsing="false" onAction="#switchtojob" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Joblist" textAlignment="CENTER" />
     </children>
 </AnchorPane>
