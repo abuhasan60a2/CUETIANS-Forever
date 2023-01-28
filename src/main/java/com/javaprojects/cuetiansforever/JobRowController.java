@@ -32,7 +32,7 @@ public class JobRowController implements Initializable {
         jobtitle.setText(resourceBundle.getString("jobtitle"));
         jobdescription.setText(resourceBundle.getString("jobdescription"));
     }
-    public void showdetails(ActionEvent event) throws IOException {
+    public void showdetails(ActionEvent event) throws Exception {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
         scene = new Scene(loadFXML("Job-Details"));
         stage.setScene(scene);

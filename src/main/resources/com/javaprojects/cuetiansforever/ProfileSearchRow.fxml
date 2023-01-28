@@ -48,7 +48,7 @@
                   <Font size="20.0" />
                </font>
             </Label>
-            <Button fx:id="viewcuetianprofile" mnemonicParsing="false" prefHeight="43.0" prefWidth="115.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black; -fx-font-weight: bold;" text="View Details" textAlignment="CENTER" textFill="#6f1ab6">
+            <Button fx:id="viewcuetianprofile" mnemonicParsing="false" onAction="#showdetails" prefHeight="43.0" prefWidth="115.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black; -fx-font-weight: bold;" text="View Details" textAlignment="CENTER" textFill="#6f1ab6">
                <font>
                   <Font size="15.0" />
                </font>
