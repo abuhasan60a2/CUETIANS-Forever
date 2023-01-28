@@ -4,8 +4,11 @@ import Backend.db;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
 
+import java.io.File;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -19,24 +22,24 @@ public class JobDetailsController implements Initializable {
     private Text jobdescription;
     @FXML
     private Text text;
-
+@FXML
+private ImageView image;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       // long job_id  = Long.parseLong(resourceBundle.getString("id"));
-        //System.out.println(job_id);
+        image.setImage(new Image((new File("src/cuetlogo.png").getAbsolutePath())));
+        long job_id  = Long.parseLong(resourceBundle.getString("id"));
+        System.out.println(image.getImage().getUrl());
         try {
             Connection source  = db.makeConnections();
 
-            PreparedStatement st = source.prepareStatement("SELECT * FROM javadb_job WHERE job_title = ? AND job_description = ?");
-           // st.setLong(1, job_id);
-            st.setString(1, resourceBundle.getString("jobtitle"));
-            st.setString(2,resourceBundle.getString("jobdescription"));
+            PreparedStatement st = source.prepareStatement("SELECT * FROM javadb_job WHERE id = ?");
+           st.setLong(1,job_id);
             ResultSet rs = st.executeQuery();
             rs.next();
             jobtitle.setText(resourceBundle.getString("jobtitle"));
-            jobtitle.setText(resourceBundle.getString("jobdescription"));
+            jobdescription.setText(resourceBundle.getString("jobdescription"));
 
         } catch (Exception e) {
             e.printStackTrace();

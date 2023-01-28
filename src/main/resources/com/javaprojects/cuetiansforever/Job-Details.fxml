@@ -14,7 +14,7 @@
    <children>
       <AnchorPane layoutY="-2.0" prefHeight="104.0" prefWidth="772.0" style="-fx-background-color: D7E9B9;">
          <children>
-            <ImageView fitHeight="83.0" fitWidth="89.0" layoutX="29.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="image" fitHeight="83.0" fitWidth="89.0" layoutX="29.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../../cuetlogo.png" />
                </image>

@@ -42,7 +42,7 @@ public class JobBoardController implements Initializable {
                     protected Object handleGetObject(String key) {
                         if(key == "id"){
                             System.out.println(list.get(j).getId());
-                            return list.get(j).getId();
+                            return String.valueOf( list.get(j).getId());
                         }
                         if (key == "jobtitle") {
                             return list.get(j).getJobTitle();
