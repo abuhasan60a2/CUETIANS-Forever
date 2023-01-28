@@ -58,6 +58,13 @@ public class Alumni implements Initializable {
         stage.setScene(scene);
         stage.show();
     }
+    public void viewmyjobs(ActionEvent event) throws IOException{
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(loadFXML("AlumniPostedJobs"));
+        stage.setScene(scene);
+        stage.show();
+
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {

@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="85.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="85.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaprojects.cuetiansforever.JobRowController">
    <children>
       <HBox fx:id="jobrow" alignment="CENTER_LEFT" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="85.0" prefWidth="850.0">
          <children>
@@ -19,7 +19,7 @@
                   <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                </HBox.margin>
             </Label>
-            <Label fx:id="jobdescription" contentDisplay="RIGHT" prefHeight="45.0" prefWidth="382.0">
+            <Label fx:id="jobdescription" alignment="CENTER" contentDisplay="CENTER" prefHeight="45.0" prefWidth="382.0">
                <font>
                   <Font size="20.0" />
                </font>
@@ -27,7 +27,7 @@
                   <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="viewjobdashboard" mnemonicParsing="false" prefHeight="43.0" prefWidth="171.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black; -fx-font-weight: bold;" text="View Details" textAlignment="CENTER" textFill="#6f1ab6">
+            <Button fx:id="viewjobdashboard" mnemonicParsing="false" onAction="#showdetails" prefHeight="43.0" prefWidth="171.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black; -fx-font-weight: bold;" text="View Details" textAlignment="CENTER" textFill="#6f1ab6">
                <font>
                   <Font size="15.0" />
                </font>

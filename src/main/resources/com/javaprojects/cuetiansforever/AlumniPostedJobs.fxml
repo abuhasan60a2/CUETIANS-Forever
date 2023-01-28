@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="527.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaprojects.cuetiansforever.JobBoardController">
+<AnchorPane prefHeight="527.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaprojects.cuetiansforever.AlumniPostedJobsController">
    <children>
       <Pane prefHeight="99.0" prefWidth="850.0" style="-fx-background-color: D7E9B9;">
          <children>
@@ -19,7 +19,7 @@
                   <Image url="@../../../../../cuetlogo.png" />
                </image>
             </ImageView>
-            <Text fill="#6f1ab6" layoutX="319.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Job Board">
+            <Text fill="#6f1ab6" layoutX="319.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Your Posted Jobs">
                <font>
                   <Font size="29.0" />
                </font>
@@ -31,6 +31,6 @@
             <VBox fx:id="jobholder" prefHeight="429.0" prefWidth="850.0" />
          </content>
       </ScrollPane>
-      <Button fx:id="returntohome" layoutX="717.0" layoutY="540.0" mnemonicParsing="false" onAction="#backtohome" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Return" textAlignment="CENTER" />
+      <Button fx:id="returntohome" layoutX="707.0" layoutY="530.0" mnemonicParsing="false" onAction="#backtohome" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Return" textAlignment="CENTER" />
    </children>
 </AnchorPane>

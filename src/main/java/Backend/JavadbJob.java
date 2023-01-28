@@ -103,4 +103,39 @@ public class JavadbJob {
     }
     return 0;
   }
+  public static ArrayList<JavadbJob> getlistbyid(long studentid){
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT * FROM  javadb_job WHERE cuetian_post_id = ?");
+      st.setLong(1,studentid);
+      ResultSet rs = st.executeQuery();
+      if(rs==null){
+        System.out.println("no data in job table");
+      }
+      ArrayList<JavadbJob> list = new ArrayList<JavadbJob>();
+      while (rs.next()) {
+        list.add(new JavadbJob(rs));
+      }
+      System.out.println("getalljobs succeeded");
+      return list;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+  public static int countjobsbyid(long studentid) {
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT COUNT(*) AS count FROM `javadb_job` WHERE cuetian_post_id = ?");
+      st.setLong(1, studentid);
+      ResultSet rs = st.executeQuery();
+      rs.next();
+      System.out.println("countjobs function succeeded");
+      return rs.getInt("count");
+    }
+    catch (SQLException e){
+      e.printStackTrace();
+    }
+    return 0;
+  }
 }

@@ -1,6 +1,6 @@
 package com.javaprojects.cuetiansforever;
-import Backend.JavadbJob;
 import Backend.db;
+import Backend.JavadbJob;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,28 +12,32 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Enumeration;
 import java.util.ResourceBundle;
 
 import static com.javaprojects.cuetiansforever.HelloApplication.loadFXML;
 
-public class JobBoardController implements Initializable {
+public class AlumniPostedJobsController implements Initializable {
     private Stage stage;
     private Scene scene;
+    private long studentid = db.cuetian.getStudentId();
     @FXML
-    private VBox jobholder= null;
-    private int totaljobavailable;
+    private VBox jobholder = null;
+
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       ArrayList<JavadbJob> list = JavadbJob.getAllJobs();
-       showalljobs(list);
-
+        ArrayList<JavadbJob> list = JavadbJob.getlistbyid(studentid);
+        showalljobs(list,studentid);
     }
-    void showalljobs(ArrayList<JavadbJob> list) {
-        Node[] nodes = new Node[JavadbJob.countJobs()];
+    private void showalljobs(ArrayList<JavadbJob> list,long studentid){
+        Node[] nodes = new Node[JavadbJob.countjobsbyid(studentid)];
         for(int i =0; i< nodes.length; i++){
             try {
                 final int j = i;
@@ -54,7 +58,7 @@ public class JobBoardController implements Initializable {
                         throw new UnsupportedOperationException("Not enumeration supported yet.");
                     }
                 };
-                nodes[i] = FXMLLoader.load(getClass().getResource("Job-Row.fxml"), r);
+                nodes[i] = FXMLLoader.load(getClass().getResource("AlumniPostedJob-Row.fxml"), r);
                 jobholder.getChildren().add(nodes[i]);
             }
             catch (IOException e){
@@ -64,13 +68,7 @@ public class JobBoardController implements Initializable {
     }
     public void backtohome(ActionEvent event) throws IOException {
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        String studentsatus = db.cuetian.getStudentStatus();
-        if(studentsatus.equals("A")) {
-            scene = new Scene(loadFXML("Alumni"));
-        }
-        else {
-            scene = new Scene(loadFXML("Student"));
-        }
+        scene = new Scene(loadFXML("Alumni"));
         stage.setScene(scene);
         stage.show();
     }
