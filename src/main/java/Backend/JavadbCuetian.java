@@ -5,6 +5,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 
 public class JavadbCuetian {
 
@@ -269,4 +270,310 @@ public class JavadbCuetian {
 
   }
 
+  //// Functions for profile serach query
+
+
+  //function to search by name
+  public static ArrayList<JavadbCuetian> getlistbyname(String firstName, String lastName){
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT * FROM  javadb_cuetian WHERE first_name = ? AND  last_name = ?");
+      st.setString(1,firstName);
+      st.setString(2, lastName);
+      ResultSet rs = st.executeQuery();
+      if(rs==null){
+        System.out.println("no data in job table");
+      }
+      ArrayList<JavadbCuetian> list = new ArrayList<JavadbCuetian>();
+      while (rs.next()) {
+        list.add(new JavadbCuetian(rs));
+      }
+      System.out.println("getalljobs succeeded");
+      return list;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+
+  //function to count profile searched by name
+  public static int countuserbyname(String firstName, String lastName) {
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT COUNT(*) AS count FROM javadb_cuetian WHERE first_name=? AND last_name = ?");
+      st.setString(1, firstName);
+      st.setString(2, lastName);
+      ResultSet rs = st.executeQuery();
+      rs.next();
+      return rs.getInt("count");
+    }
+    catch (SQLException e){
+      e.printStackTrace();
+    }
+    return 0;
+  }
+
+  //function to search by batch
+  public static ArrayList<JavadbCuetian> getlistbybatch(long batch){
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT * FROM  javadb_cuetian WHERE batch= ?");
+      st.setLong(1,batch);
+      ResultSet rs = st.executeQuery();
+      if(rs==null){
+        System.out.println("no data in job table");
+      }
+      ArrayList<JavadbCuetian> list = new ArrayList<JavadbCuetian>();
+      while (rs.next()) {
+        list.add(new JavadbCuetian(rs));
+      }
+      System.out.println("getalljobs succeeded");
+      return list;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+  //function to count profile searched by batch
+  public static int countuserbybatch(long batch) {
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT COUNT(*) AS count FROM javadb_cuetian WHERE batch = ?");
+      st.setLong(1, batch);
+      ResultSet rs = st.executeQuery();
+      rs.next();
+      return rs.getInt("count");
+    }
+    catch (SQLException e){
+      e.printStackTrace();
+    }
+    return 0;
+  }
+  //function to search profile by company
+  public static ArrayList<JavadbCuetian> getlistbycompany(String company){
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT * FROM  javadb_cuetian WHERE company = ?");
+      st.setString(1,company);
+      ResultSet rs = st.executeQuery();
+      if(rs==null){
+        System.out.println("no data in job table");
+      }
+      ArrayList<JavadbCuetian> list = new ArrayList<JavadbCuetian>();
+      while (rs.next()) {
+        list.add(new JavadbCuetian(rs));
+      }
+      System.out.println("getalljobs succeeded");
+      return list;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+
+  //function to count profile searched by company
+  public static int countuserbycompany(String company) {
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT COUNT(*) AS count FROM javadb_cuetian WHERE company=?");
+      st.setString(1, company);
+      ResultSet rs = st.executeQuery();
+      rs.next();
+      return rs.getInt("count");
+    }
+    catch (SQLException e){
+      e.printStackTrace();
+    }
+    return 0;
+  }
+
+  //function to search profile by name and batch
+  public static ArrayList<JavadbCuetian> getlistbynameandbatch(String firstName, String lastName,long batch){
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT * FROM  javadb_cuetian WHERE first_name = ? AND  last_name = ? AND batch = ?");
+      st.setString(1,firstName);
+      st.setString(2, lastName);
+      st.setLong(3,batch);
+      ResultSet rs = st.executeQuery();
+      if(rs==null){
+        System.out.println("no data in job table");
+      }
+      ArrayList<JavadbCuetian> list = new ArrayList<JavadbCuetian>();
+      while (rs.next()) {
+        list.add(new JavadbCuetian(rs));
+      }
+      System.out.println("getalljobs succeeded");
+      return list;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+
+  //funciton to count profile searched by name and  batch
+  public static int countuserbyname(String firstName, String lastName, long batch) {
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT COUNT(*) AS count FROM javadb_cuetian WHERE first_name=? AND last_name = ? AND batch =?");
+      st.setString(1, firstName);
+      st.setString(2, lastName);
+      st.setLong(3, batch);
+      ResultSet rs = st.executeQuery();
+      rs.next();
+      return rs.getInt("count");
+    }
+    catch (SQLException e){
+      e.printStackTrace();
+    }
+    return 0;
+  }
+
+
+  //function to search profile by name and company
+  public static ArrayList<JavadbCuetian> getlistbynameandcompany(String firstName, String lastName, String company){
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT * FROM  javadb_cuetian WHERE first_name = ? AND  last_name = ? AND  company=?");
+      st.setString(1,firstName);
+      st.setString(2, lastName);
+      st.setString(3, company);
+      ResultSet rs = st.executeQuery();
+      if(rs==null){
+        System.out.println("no data in job table");
+      }
+      ArrayList<JavadbCuetian> list = new ArrayList<JavadbCuetian>();
+      while (rs.next()) {
+        list.add(new JavadbCuetian(rs));
+      }
+      System.out.println("getalljobs succeeded");
+      return list;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+
+  //function to search profile by name and company
+  public static ArrayList<JavadbCuetian> getlistbybatchandcompany(long batch, String company){
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT * FROM  javadb_cuetian WHERE batch = ? AND  company = ?");
+      st.setLong(1,batch);
+      st.setString(2, company);
+      ResultSet rs = st.executeQuery();
+      if(rs==null){
+        System.out.println("no data in job table");
+      }
+      ArrayList<JavadbCuetian> list = new ArrayList<JavadbCuetian>();
+      while (rs.next()) {
+        list.add(new JavadbCuetian(rs));
+      }
+      System.out.println("getalljobs succeeded");
+      return list;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+
+  //function to count profile searched by name and company
+  public static int countuserbyname(String firstName, String lastName, String company) {
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT COUNT(*) AS count FROM javadb_cuetian WHERE first_name=? AND last_name = ? AND company =?");
+      st.setString(1, firstName);
+      st.setString(2, lastName);
+      st.setString(3, company);
+      ResultSet rs = st.executeQuery();
+      rs.next();
+      return rs.getInt("count");
+    }
+    catch (SQLException e){
+      e.printStackTrace();
+    }
+    return 0;
+  }
+
+
+  //function to search profile based on all values
+  public static ArrayList<JavadbCuetian> getlistbyall(String firstName, String lastName, long batch, String company){
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT * FROM  javadb_cuetian WHERE first_name = ? AND  last_name = ? AND batch = ? AND company = ?");
+      st.setString(1,firstName);
+      st.setString(2, lastName);
+      st.setLong(3,batch);
+      st.setString(4, company);
+      ResultSet rs = st.executeQuery();
+      if(rs==null){
+        System.out.println("no data in job table");
+      }
+      ArrayList<JavadbCuetian> list = new ArrayList<JavadbCuetian>();
+      while (rs.next()) {
+        list.add(new JavadbCuetian(rs));
+      }
+      System.out.println("getalljobs succeeded");
+      return list;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+  //function to count profile based on all values
+
+  public static int countuserbyname(String firstName, String lastName, long batch, String company) {
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT COUNT(*) AS count FROM javadb_cuetian WHERE first_name=? AND last_name = ? AND batch =? AND company = ?");
+      st.setString(1, firstName);
+      st.setString(2, lastName);
+      st.setLong(3, batch);
+      st.setString(4, company);
+      ResultSet rs = st.executeQuery();
+      rs.next();
+      return rs.getInt("count");
+    }
+    catch (SQLException e){
+      e.printStackTrace();
+    }
+    return 0;
+  }
+
+  //function to get all users
+  public static ArrayList<JavadbCuetian> getall(){
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT * FROM  javadb_cuetian");
+      ResultSet rs = st.executeQuery();
+      if(rs==null){
+        System.out.println("no data in job table");
+      }
+      ArrayList<JavadbCuetian> list = new ArrayList<JavadbCuetian>();
+      while (rs.next()) {
+        list.add(new JavadbCuetian(rs));
+      }
+      System.out.println("getalljobs succeeded");
+      return list;
+    } catch (SQLException e) {
+      e.printStackTrace();
+    }
+    return null;
+  }
+
+  //function to count all users
+
+  public static int countall() {
+    try {
+      Connection source = db.makeConnections();
+      PreparedStatement st = source.prepareStatement("SELECT COUNT(*) AS count FROM javadb_cuetian");
+      ResultSet rs = st.executeQuery();
+      rs.next();
+      return rs.getInt("count");
+    }
+    catch (SQLException e){
+      e.printStackTrace();
+    }
+    return 0;
+  }
 }
