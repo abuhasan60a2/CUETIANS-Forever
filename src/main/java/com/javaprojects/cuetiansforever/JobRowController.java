@@ -25,17 +25,24 @@ public class JobRowController implements Initializable {
     private Label jobdescription;
     @FXML
     private Button viewjobdashboard;
+    private ResourceBundle saved_resources;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println(resourceBundle.getString("jobtitle"));
         jobtitle.setText(resourceBundle.getString("jobtitle"));
         jobdescription.setText(resourceBundle.getString("jobdescription"));
+        this.saved_resources= resourceBundle;
     }
     public void showdetails(ActionEvent event) throws Exception {
-        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(loadFXML("Job-Details"));
-        stage.setScene(scene);
-        stage.show();
+        try {
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(HelloApplication.loadFXMLwithresource("Job-Details",this.saved_resources));
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 }
