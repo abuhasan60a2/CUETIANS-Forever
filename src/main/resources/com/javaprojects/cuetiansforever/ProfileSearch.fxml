@@ -22,7 +22,7 @@
             <TextField fx:id="name" layoutX="215.0" layoutY="25.0" prefHeight="25.0" prefWidth="174.0" promptText="enter full name" />
             <TextField fx:id="batch" layoutX="470.0" layoutY="25.0" prefHeight="25.0" prefWidth="86.0" promptText="enter batch" />
             <TextField fx:id="company" layoutX="632.0" layoutY="25.0" prefHeight="25.0" prefWidth="200.0" promptText="enter company" />
-            <Button fx:id="search" layoutX="790.0" layoutY="58.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Search" textAlignment="CENTER" />
+            <Button fx:id="search" layoutX="790.0" layoutY="58.0" mnemonicParsing="false" onAction="#searchresultshow" prefHeight="25.0" prefWidth="101.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Search" textAlignment="CENTER" />
             <Text layoutX="160.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" />
             <Text layoutX="417.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="batch:" />
             <Text layoutX="572.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Company:" />
