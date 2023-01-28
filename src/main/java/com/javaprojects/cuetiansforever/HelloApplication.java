@@ -22,11 +22,11 @@ public class HelloApplication extends Application {
         return fxmlLoader.load();
     }
 
-    static void setRootwithresource(String fxml,ResourceBundle state) throws IOException {
-
-        scene.setRoot(loadFXMLwithresource( fxml,state));
-
-    }
+//    static void setRootwithresource(String fxml,ResourceBundle state) throws IOException {
+//
+//        scene.setRoot(loadFXMLwithresource( fxml,state));
+//
+//    }
     static Parent loadFXMLwithresource(String fxml, ResourceBundle state) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource(fxml + ".fxml"),state);
         return fxmlLoader.load();
