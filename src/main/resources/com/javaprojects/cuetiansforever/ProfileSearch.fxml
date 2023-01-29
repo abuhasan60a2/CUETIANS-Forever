@@ -16,7 +16,7 @@
          <children>
             <ImageView fitHeight="86.0" fitWidth="86.0" layoutX="28.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../cuetlogo.png" />
+                  <Image url="file:/D:/personal%20projects/CUETIANS-Forever/src/cuetlogo.png" />
                </image>
             </ImageView>
             <TextField fx:id="name" layoutX="215.0" layoutY="25.0" prefHeight="25.0" prefWidth="174.0" promptText="enter full name" />

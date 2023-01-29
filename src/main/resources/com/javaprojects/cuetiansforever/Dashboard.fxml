@@ -14,7 +14,7 @@
          <children>
             <ImageView fitHeight="106.0" fitWidth="157.0" layoutX="37.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../cuetlogo.png" />
+                  <Image url="file:/D:/personal%20projects/CUETIANS-Forever/src/cuetlogo.png" />
                </image>
             </ImageView>
             <Label fx:id="name" layoutX="354.0" layoutY="40.0" prefHeight="38.0" prefWidth="207.0" style="-fx-alignment: center; -fx-font-weight: bold;" textFill="#6f1ab6">

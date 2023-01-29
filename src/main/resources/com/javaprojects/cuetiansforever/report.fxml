@@ -20,7 +20,7 @@
             </Text>
             <ImageView fitHeight="106.0" fitWidth="157.0" layoutX="37.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../cuetlogo.png" />
+                  <Image url="file:/D:/personal%20projects/CUETIANS-Forever/src/cuetlogo.png" />
                </image>
             </ImageView>
          </children>

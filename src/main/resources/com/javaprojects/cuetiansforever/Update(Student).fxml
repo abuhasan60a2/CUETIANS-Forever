@@ -22,7 +22,7 @@
                 </Text>
                 <ImageView fitHeight="98.0" fitWidth="101.0" layoutX="50.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../cuetlogo.png" />
+                        <Image url="file:/D:/personal%20projects/CUETIANS-Forever/src/cuetlogo.png" />
                     </image>
                 </ImageView>
             </children>

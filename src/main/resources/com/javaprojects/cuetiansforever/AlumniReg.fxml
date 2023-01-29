@@ -17,7 +17,7 @@
             <children>
                 <ImageView fitHeight="104.0" fitWidth="104.0" layoutX="45.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../cuetlogo.png" />
+                        <Image url="file:/D:/personal%20projects/CUETIANS-Forever/src/cuetlogo.png" />
                     </image>
                 </ImageView>
                 <Text fill="#6f1ab6" layoutX="413.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Registration Form(Alumni)">

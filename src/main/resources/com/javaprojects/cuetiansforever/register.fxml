@@ -18,7 +18,7 @@
                 </Label>
                 <ImageView fitHeight="71.0" fitWidth="61.0" layoutX="23.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
                     <image>
-                        <Image url="@../../../../../cuetlogo.png" />
+                        <Image url="file:/D:/personal%20projects/CUETIANS-Forever/src/cuetlogo.png" />
                     </image>
                 </ImageView>
             </children>

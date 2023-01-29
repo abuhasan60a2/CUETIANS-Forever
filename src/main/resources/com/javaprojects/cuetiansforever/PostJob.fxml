@@ -15,7 +15,7 @@
          <children>
             <ImageView fitHeight="80.0" fitWidth="87.0" layoutX="33.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
                <image>
-                  <Image url="@../../../../../cuetlogo.png" />
+                  <Image url="file:/D:/personal%20projects/CUETIANS-Forever/src/cuetlogo.png" />
                </image>
             </ImageView>
             <Text fill="#6f1ab6" layoutX="316.0" layoutY="59.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Job Post" wrappingWidth="113.0">
