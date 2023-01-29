@@ -64,7 +64,7 @@
                 <Font size="15.0" />
             </font>
         </Text>
-        <Button fx:id="updatedata" layoutX="769.0" layoutY="566.0" mnemonicParsing="false" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black; -fx-font-weight: bold;" text="Update" textAlignment="CENTER" textFill="#6f1ab6">
+        <Button fx:id="updatedata" layoutX="769.0" layoutY="566.0" mnemonicParsing="false" onAction="#update_profile_onClick" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black; -fx-font-weight: bold;" text="Update" textAlignment="CENTER" textFill="#6f1ab6">
             <font>
                 <Font size="15.0" />
             </font>
@@ -93,7 +93,6 @@
                 <Font size="15.0" />
             </font>
         </Button>
-        <PasswordField fx:id="repassword1" layoutX="49.0" layoutY="425.0" prefHeight="25.0" prefWidth="253.0" />
         <Text layoutX="48.0" layoutY="468.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Present Address:">
             <font>
                 <Font size="15.0" />
@@ -109,5 +108,6 @@
       <Label fx:id="permanent_address" layoutX="762.0" layoutY="219.0" prefHeight="17.0" prefWidth="132.0" textFill="#fc0707" />
       <Label fx:id="facebook_profile" layoutX="769.0" layoutY="345.0" prefHeight="17.0" prefWidth="132.0" textFill="#fc0707" />
       <Label fx:id="linkedin_profile" layoutX="769.0" layoutY="392.0" prefHeight="17.0" prefWidth="132.0" textFill="#fc0707" />
+      <TextField fx:id="phonenumber" layoutX="45.0" layoutY="425.0" prefHeight="25.0" prefWidth="253.0" />
     </children>
 </AnchorPane>
