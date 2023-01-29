@@ -21,6 +21,8 @@ import java.util.Objects;
 import java.util.ResourceBundle;
 import java.util.logging.Logger;
 
+import static com.javaprojects.cuetiansforever.HelloApplication.loadFXML;
+
 
 public class ProfileSearchRowController implements Initializable {
     private  Stage stage;
@@ -51,4 +53,5 @@ public class ProfileSearchRowController implements Initializable {
             e.printStackTrace();
         }
     }
+
 }

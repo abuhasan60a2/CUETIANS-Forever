@@ -51,7 +51,7 @@ public class Home {
     public static String getName(){
         return name;
     }
-    private boolean successful_login;
+    private boolean successful_login=false;
     public Student student = new Student();
     public void changetoreg(ActionEvent event) throws IOException {
 //        root = FXMLLoader.load(getClass().getResource("register.fxml"));
@@ -65,7 +65,7 @@ public class Home {
             successful_login = db.login(Integer.parseInt(studentid.getText()), password.getText());
             String name = db.cuetian.getFirstName() + " " + db.cuetian.getLastName();
             System.out.println(name);
-            if(successful_login == true){
+            if(successful_login){
                 String student_status = db.cuetian.getStudentStatus();
                 stage = (Stage)((Node)event.getSource()).getScene().getWindow();
                 if(Objects.equals(student_status, "A")){

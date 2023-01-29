@@ -128,7 +128,7 @@ public class AlumniReg {
             errortext.setText("Please fillup the field");
             return false;
         }
-        if(db.signup(Studentid, firstName, lastName, Email, Password, PhoneNumber, Department, "S", Batch, dob, Age, PresentAddress, PermanentAddress, JoiningYear, PassingYear, Profession, Company, facebook, linkedin)==true) {
+        if(db.signup(Studentid, firstName, lastName, Email, Password, PhoneNumber, Department, "A", Batch, dob, Age, PresentAddress, PermanentAddress, JoiningYear, PassingYear, Profession, Company, facebook, linkedin)==true) {
             return true;
         }
         System.out.println("some error here");

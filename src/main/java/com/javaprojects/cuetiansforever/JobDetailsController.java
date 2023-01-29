@@ -1,21 +1,30 @@
 package com.javaprojects.cuetiansforever;
 
 import Backend.db;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.Node;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 
 import java.io.File;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
+import static com.javaprojects.cuetiansforever.HelloApplication.loadFXML;
+
 public class JobDetailsController implements Initializable {
+    private Stage stage;
+    private Scene scene;
     @FXML
     private Label jobtitle;
     @FXML
@@ -46,5 +55,11 @@ private ImageView image;
 //            throw new RuntimeException(e);
         }
 
+    }
+    public void returntojobboard(ActionEvent event) throws IOException {
+        stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+        scene = new Scene(loadFXML("JobBoard"));
+        stage.setScene(scene);
+        stage.show();
     }
 }

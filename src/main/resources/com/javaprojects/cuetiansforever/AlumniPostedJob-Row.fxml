@@ -27,7 +27,7 @@
                   <Insets bottom="6.0" left="6.0" right="6.0" top="6.0" />
                </HBox.margin>
             </Label>
-            <Button fx:id="viewjobdashboard" mnemonicParsing="false" prefHeight="43.0" prefWidth="152.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black; -fx-font-weight: bold;" text="View Details" textAlignment="CENTER" textFill="#6f1ab6">
+            <Button fx:id="viewjobdashboard" mnemonicParsing="false" onAction="#showdetails" prefHeight="43.0" prefWidth="152.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black; -fx-font-weight: bold;" text="View Details" textAlignment="CENTER" textFill="#6f1ab6">
                <font>
                   <Font size="15.0" />
                </font>

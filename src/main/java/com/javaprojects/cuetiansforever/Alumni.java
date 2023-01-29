@@ -60,7 +60,7 @@ public class Alumni implements Initializable {
     }
     public void viewmyjobs(ActionEvent event) throws IOException{
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        scene = new Scene(loadFXML("ProfileSearch"));
+        scene = new Scene(loadFXML("AlumniPostedJobs"));
         stage.setScene(scene);
         stage.show();
 
