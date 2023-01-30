@@ -4,8 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import java.io.File;
 import java.io.IOException;
 import java.util.ResourceBundle;
 
@@ -15,6 +17,8 @@ public class HelloApplication extends Application {
     public void start(Stage stage) throws IOException {
          scene = new Scene(loadFXML("home"));
         stage.setScene(scene);
+        stage.getIcons().add(new Image((new File("src/cuetlogo.png").getAbsolutePath())));
+        stage.setTitle("CUETIANS-Forever");
         stage.show();
     }
     static Parent loadFXML(String fxml) throws IOException {

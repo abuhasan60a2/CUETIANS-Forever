@@ -39,6 +39,8 @@ public class Dashboard implements Initializable {
     private Label profession;
     @FXML
     private Label company;
+    @FXML
+    private Label phonenumber;
 
 
     @Override
@@ -53,6 +55,8 @@ public class Dashboard implements Initializable {
         batch.setText(String.valueOf(db.cuetian.getBatch()));
         profession.setText(db.cuetian.getProfession());
         company.setText(db.cuetian.getCompany());
+        String s = Long.toString(db.cuetian.getPhoneNumber());
+        phonenumber.setText("0"+s);
     }
     public void returntohome(ActionEvent event) throws IOException {
         String student_status  = db.cuetian.getStudentStatus();

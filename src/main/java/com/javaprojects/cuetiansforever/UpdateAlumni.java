@@ -277,7 +277,9 @@ public class UpdateAlumni implements Initializable {
             firstname.setText(db.cuetian.getFirstName());
             lastname.setText(db.cuetian.getLastName());
             email.setText(db.cuetian.getEmail());
-            phonenumber.setText(String.valueOf(db.cuetian.getPhoneNumber()));
+            String s = Long.toString(db.cuetian.getPhoneNumber());
+            System.out.println(s);
+            phonenumber.setText(s);
             presentaddress.setText(db.cuetian.getPresentAddress());
             permanentaddress.setText(db.cuetian.getPermanentAddress());
             profession.setText(db.cuetian.getProfession());

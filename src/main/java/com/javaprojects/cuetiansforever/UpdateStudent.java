@@ -248,6 +248,9 @@ public class UpdateStudent implements Initializable {
         firstname.setText(db.cuetian.getFirstName());
         lastname.setText(db.cuetian.getLastName());
         email.setText(db.cuetian.getEmail());
+        String s = Long.toString(db.cuetian.getPhoneNumber());
+        System.out.println(s);
+        phonenumber.setText(s);
         presentaddress.setText(db.cuetian.getPresentAddress());
         permanentaddress.setText(db.cuetian.getPermanentAddress());
         facebookprofile.setText(db.cuetian.getFacebookProfile());

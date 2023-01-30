@@ -39,7 +39,7 @@
             <Font size="18.0" />
          </font>
       </Label>
-      <Label fx:id="profession" layoutX="608.0" layoutY="239.0" prefHeight="27.0" prefWidth="235.0">
+      <Label fx:id="phonenumber" layoutX="614.0" layoutY="329.0" prefHeight="27.0" prefWidth="235.0">
          <font>
             <Font size="18.0" />
          </font>
@@ -119,5 +119,15 @@
             <Font size="18.0" />
          </font>
       </Text>
+      <Text fill="#6f1ab6" layoutX="442.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Phone Number:" wrappingWidth="172.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Text>
+      <Label fx:id="profession" layoutX="608.0" layoutY="238.0" prefHeight="27.0" prefWidth="235.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
