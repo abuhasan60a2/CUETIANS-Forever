@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 public class JavadbJob {
 
-  private static long id;
+  private  long id;
   private String jobTitle;
   private String jobDescription;
   private long cuetianPostId;
@@ -51,6 +51,7 @@ public class JavadbJob {
 
   public JavadbJob(ResultSet rs) {
     try {
+      this.id = rs.getLong("id");
       this.jobTitle = rs.getString("job_title");
       this.jobDescription = rs.getString("job_description");
       this.cuetianPostId = rs.getLong("cuetian_post_id");

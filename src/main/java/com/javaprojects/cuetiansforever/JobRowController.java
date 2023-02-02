@@ -29,7 +29,7 @@ public class JobRowController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println(resourceBundle.getString("jobtitle"));
+//        System.out.println(resourceBundle.getString("id"));
         jobtitle.setText(resourceBundle.getString("jobtitle"));
         jobdescription.setText(resourceBundle.getString("jobdescription"));
         this.saved_resources= resourceBundle;
