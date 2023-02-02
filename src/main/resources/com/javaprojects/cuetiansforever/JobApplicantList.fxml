@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="527.0" prefWidth="850.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaprojects.cuetiansforever.JobApplicantListController">
+   <children>
+      <Pane prefHeight="99.0" prefWidth="850.0" style="-fx-background-color: D7E9B9;">
+         <children>
+            <ImageView fitHeight="86.0" fitWidth="86.0" layoutX="28.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="file:/D:/personal%20projects/CUETIANS-Forever/src/cuetlogo.png" />
+               </image>
+            </ImageView>
+            <Text fill="#6f1ab6" layoutX="319.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Applicant List">
+               <font>
+                  <Font size="29.0" />
+               </font>
+            </Text>
+         </children>
+      </Pane>
+      <ScrollPane layoutY="99.0">
+         <content>
+            <VBox fx:id="applicantholder" prefHeight="429.0" prefWidth="850.0" />
+         </content>
+      </ScrollPane>
+      <Button fx:id="returntohome" layoutX="717.0" layoutY="540.0" mnemonicParsing="false" onAction="#return_on_button_click" prefHeight="39.0" prefWidth="118.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black;" text="Return" textAlignment="CENTER" />
+   </children>
+</AnchorPane>

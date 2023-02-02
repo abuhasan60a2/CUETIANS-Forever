@@ -62,4 +62,15 @@ public class AlumniPostedJobRowController implements Initializable {
             e.printStackTrace();
         }
     }
+    public void show_applicants(ActionEvent event) throws Exception{
+        try {
+            stage = (Stage)((Node)event.getSource()).getScene().getWindow();
+            scene = new Scene(HelloApplication.loadFXMLwithresource("JobApplicantList",this.saved_resources));
+            stage.setScene(scene);
+            stage.show();
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }

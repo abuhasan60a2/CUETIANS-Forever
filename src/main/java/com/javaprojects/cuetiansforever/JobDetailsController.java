@@ -45,7 +45,6 @@ public class JobDetailsController implements Initializable {
          long job_id  = Long.parseLong(resourceBundle.getString("id"));
         job_seek_id = job_id;
         System.out.println(resourceBundle.getString("id"));
-//        System.out.println(image.getImage().getUrl());
         try {
             Connection source  = db.makeConnections();
 

@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="635.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.javaprojects.cuetiansforever.JobApplicantDashboardController">
+    <children>
+        <AnchorPane layoutX="-5.0" prefHeight="119.0" prefWidth="903.0" style="-fx-background-color: D7E9B9;">
+            <children>
+                <ImageView fitHeight="106.0" fitWidth="157.0" layoutX="37.0" layoutY="6.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="file:/D:/personal%20projects/CUETIANS-Forever/src/cuetlogo.png" />
+                    </image>
+                </ImageView>
+                <Label fx:id="name" layoutX="354.0" layoutY="40.0" prefHeight="38.0" prefWidth="207.0" style="-fx-alignment: center; -fx-font-weight: bold;" textFill="#6f1ab6">
+                    <font>
+                        <Font size="26.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+        <Label fx:id="email" layoutX="125.0" layoutY="150.0" prefHeight="27.0" prefWidth="258.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="presentaddress" layoutX="59.0" layoutY="225.0" prefHeight="90.0" prefWidth="329.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="permanentaddress" layoutX="59.0" layoutY="349.0" prefHeight="90.0" prefWidth="329.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="profession" layoutX="608.0" layoutY="239.0" prefHeight="27.0" prefWidth="235.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="company" layoutX="608.0" layoutY="286.0" prefHeight="27.0" prefWidth="235.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="facebook" layoutX="162.0" layoutY="453.0" prefHeight="27.0" prefWidth="244.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="linkedin" layoutX="158.0" layoutY="494.0" prefHeight="27.0" prefWidth="244.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="department" layoutX="608.0" layoutY="151.0" prefHeight="27.0" prefWidth="235.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Label fx:id="batch" layoutX="608.0" layoutY="198.0" prefHeight="27.0" prefWidth="235.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Label>
+        <Button fx:id="returnbutton" layoutX="640.0" layoutY="569.0" mnemonicParsing="false" onAction="#return_to_list" prefHeight="53.0" prefWidth="172.0" style="-fx-background-color: #89C4E1; -fx-background-radius: 100; -fx-border-radius: 100; -fx-border-color: black; -fx-font-weight: bold;" text="Return" textAlignment="CENTER" textFill="#6f1ab6">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Button>
+        <Text fill="#6f1ab6" layoutX="59.0" layoutY="170.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Email:">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#6f1ab6" layoutX="59.0" layoutY="212.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Present Address:" wrappingWidth="147.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#6f1ab6" layoutX="59.0" layoutY="338.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Permanent Address:" wrappingWidth="172.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#6f1ab6" layoutX="59.0" layoutY="473.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Facebook:" wrappingWidth="98.947265625">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#6f1ab6" layoutX="59.0" layoutY="514.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="LinkedIn:" wrappingWidth="98.947265625">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#6f1ab6" layoutX="439.0" layoutY="171.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Department:" wrappingWidth="109.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#6f1ab6" layoutX="439.0" layoutY="218.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Batch:" wrappingWidth="57.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#6f1ab6" layoutX="439.0" layoutY="259.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Profession:" wrappingWidth="109.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+        <Text fill="#6f1ab6" layoutX="442.0" layoutY="306.0" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-weight: bold;" text="Company:" wrappingWidth="109.0">
+            <font>
+                <Font size="18.0" />
+            </font>
+        </Text>
+    </children>
+</AnchorPane>

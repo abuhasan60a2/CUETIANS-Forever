@@ -1,6 +1,8 @@
 package com.javaprojects.cuetiansforever;
+
+import Backend.JavadbCuetian;
 import Backend.JavadbJob;
-import Backend.db;
+import Backend.JavadbJobCuetianSeek;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -18,22 +20,23 @@ import java.util.ResourceBundle;
 
 import static com.javaprojects.cuetiansforever.HelloApplication.loadFXML;
 
-public class JobBoardController implements Initializable {
+public class JobApplicantListController implements Initializable {
     private Stage stage;
     private Scene scene;
     @FXML
-    private VBox jobholder = null;
+    private VBox applicantholder = null;
     private int totaljobavailable;
-
-
+    private long job_id;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-       ArrayList<JavadbJob> list = JavadbJob.getAllJobs();
-       showalljobs(list);
+        job_id = Long.parseLong(resourceBundle.getString("id"));
+        System.out.println(job_id);
+        ArrayList<JavadbJobCuetianSeek> list = JavadbJobCuetianSeek.getalpplicantsdata(job_id);
+        show_all_applicants(list);
 
     }
-    void showalljobs(ArrayList<JavadbJob> list) {
-        Node[] nodes = new Node[JavadbJob.countJobs()];
+    void show_all_applicants(ArrayList<JavadbJobCuetianSeek> list) {
+        Node[] nodes = new Node[JavadbJobCuetianSeek.countapplicants(job_id)];
         for(int i =0; i< nodes.length; i++){
             try {
                 final int j = i;
@@ -41,13 +44,14 @@ public class JobBoardController implements Initializable {
                     @Override
                     protected Object handleGetObject(String key) {
                         if(key == "id"){
-                            return String.valueOf(list.get(j).getId());
+                            System.out.println(list.get(j).getId());
+                            return String.valueOf( list.get(j).getId());
                         }
-                        if (key == "jobtitle") {
-                            return list.get(j).getJobTitle();
+                        if (key == "JobID") {
+                            return String.valueOf(list.get(j).getJobId());
                         }
-                        if (key == "jobdescription") {
-                            return list.get(j).getJobDescription();
+                        if (key == "CuetianID") {
+                            return String.valueOf(list.get(j).getCuetianId());
                         }
                         throw new UnsupportedOperationException("Not enumeration supported yet.");
                     }
@@ -57,23 +61,17 @@ public class JobBoardController implements Initializable {
                         throw new UnsupportedOperationException("Not enumeration supported yet.");
                     }
                 };
-                nodes[i] = FXMLLoader.load(getClass().getResource("Job-Row.fxml"), r);
-                jobholder.getChildren().add(nodes[i]);
+                nodes[i] = FXMLLoader.load(getClass().getResource("JobApplicantRow.fxml"), r);
+                applicantholder.getChildren().add(nodes[i]);
             }
             catch (IOException e){
                 e.printStackTrace();
             }
         }
     }
-    public void backtohome(ActionEvent event) throws IOException {
+    public void return_on_button_click(ActionEvent event) throws IOException{
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
-        String studentsatus = db.cuetian.getStudentStatus();
-        if(studentsatus.equals("A")) {
-            scene = new Scene(loadFXML("Alumni"));
-        }
-        else {
-            scene = new Scene(loadFXML("Student"));
-        }
+        scene = new Scene(loadFXML("AlumniPostedJobs"));
         stage.setScene(scene);
         stage.show();
     }
